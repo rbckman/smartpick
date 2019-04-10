@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
 Smartpi Consumption Kalkulator | smartpick.py
@@ -50,12 +50,12 @@ def getconsumption(year, month, day, url):
     i = 0
     days = 1
     if day == 0:
-        days = monthrange(args.year, args.month)[1]
+        days = monthrange(year, month)[1]
         day = 1
-    print("days to calculate: " + str(days))
+    #print("days calculate: " + str(days))
     while i < days:
         gettime = (datetime.strptime(str(year) + "-" + str(month).zfill(2) + '-' + str(day).zfill(2), "%Y-%m-%d") + timedelta(days=i)).strftime("%Y-%m-%d")
-        print("calculating day: " +  gettime)
+        #print("calculating day: " +  gettime)
         readsmartpi = requests.get(url=url + ":1080/api/chart/123/energy_pos/from/" + gettime + "T00:00:00.000Z/to/" + gettime + "T23:59:00.000Z").json()
         #print(readsmartpi)
         #code.interact(local=locals())
