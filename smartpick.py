@@ -39,7 +39,7 @@ def getargs():
         month = args.month
         day = 0
     else:
-        print('no input, getting todays consumption')
+        #print('no input, getting todays consumption')
         year = args.year
         month = args.month
         day = args.day
@@ -70,4 +70,4 @@ def getconsumption(year, month, day, url):
     return totkwh
 
 year, month, day, url = getargs()
-print('Total kwh: ' + str(getconsumption(year, month, day, url)))
+print(str(getconsumption(year, month, day, url)))
