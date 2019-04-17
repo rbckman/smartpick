@@ -4,6 +4,7 @@ Smartpi Consumption Kalkulator
 Simple python terminal program to get SmartPi consumtion calculation for a specific date, month or year.
 
 smartpick.py --help
+
 ```
 Get power consumption of today or a specific date using smartpi API.
 
